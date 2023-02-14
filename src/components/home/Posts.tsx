@@ -9,8 +9,6 @@ import {getPosts} from './actions/posts';
 export const Posts = () => {
   const dispatch = useAppDispatch();
   useEffect(() => {
-    console.log('--called effect');
-
     dispatch(getPosts());
   }, []);
   return (

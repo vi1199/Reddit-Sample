@@ -7,24 +7,11 @@ import {StyleSheet} from 'react-native';
 import {Button} from '../app/Button';
 import {Text} from '../app/Text';
 import {View} from '../app/View';
-import {auth, authenticate, config} from './actions/userLogin';
-import {authorize} from 'react-native-app-auth';
 
 export const UserLogin = () => {
   const navigation = useNavigation();
 
-  const called = async () => {
-    console.log('--called--');
-    //  authenticate();
-    // auth();
-    // try {
-    //   const result = await authorize(config);
-    //   // result includes accessToken, accessTokenExpirationDate and refreshToken
-    //   console.log('--token--', result);
-    // } catch (error) {
-    //   console.log('err---', error);
-    // }
-    // console.log('--token--', token);
+  const navigateToLogin = async () => {
     navigation.navigate(NavScreens.LOGIN_MODAL);
   };
   return (
@@ -33,7 +20,7 @@ export const UserLogin = () => {
       <Button
         style={styles.buttonStyle}
         title={Constants.SIGN_IN_BUTTON}
-        onPress={called}
+        onPress={navigateToLogin}
         tSize={16}
         tColor={Colors.white}
       />

@@ -22,7 +22,6 @@ export const setAccessToken = async (
   });
   dispatch(setUserAccessToken(token));
   dispatch(setLoginStatus(true));
-  console.log('token-', token);
 };
 
 export const getAccessToken: GetSecureValue = async () => {
